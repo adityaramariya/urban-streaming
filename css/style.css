@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
+
+section{
+    padding: 50px 0;
+}
 section:nth-child(even){
     background-color: #111;
 }
@@ -195,7 +199,6 @@ header .header__text::before {
     grid-template-columns: repeat(4, 1fr);
     list-style: none;
     padding: 0;
-    padding: 35px 0;
 }
 
 .video__list ul
@@ -206,7 +209,7 @@ header .header__text::before {
 
 .video__list > li
 {
-    background-color: rgba(0,0,0,0.2);
+    background-color: #212121;
 }
 
 
@@ -326,4 +329,44 @@ header .header__text::before {
     position: absolute;
     right: 0;
     top: 0;
+}
+
+
+.category__wrapper
+{
+    display: flex;
+    align-items: center;
+    padding: 0 0 15px 0;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.category__wrapper > svg{
+    margin-right: 10px;
+}
+
+
+/* pagination for video list  */
+
+.page-link
+{
+    background-color: transparent;
+    border-color: #222;
+    color: #333;
+}
+
+
+.page-item.disabled .page-link
+{
+    border-color: #222;
+    background-color: #222;
+    color:#666;
+}
+
+.page-link:hover{
+    background: #333;
+    color: #777;
+    border-color: #222;
 }
