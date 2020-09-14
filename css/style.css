@@ -17,7 +17,9 @@ section:nth-child(odd)
 
 header .navbar
 {
-    background-color: rgba(0,0,0,0.3)  !important;
+    /* background-color: rgba(0,0,0,0.3)  !important; */
+    padding: 0;
+    background-color: rgba(0,0,0,1) !important;
 }
 
 .navbar .navbar-brand
@@ -36,7 +38,7 @@ body{
 }
 
 
-header nav::before {
+/* header nav::before {
     content: '';
     position: absolute;
     background: green;
@@ -45,11 +47,10 @@ header nav::before {
     width: 100px;
     z-index: 1;
     left: 0;
-}
+} */
 
 header .logo__container {
     display: flex;
-    align-items: center;
     position: relative;
     z-index: 3;
 }
@@ -62,20 +63,23 @@ header .logo__container .badge {
     min-width:75px;
     font-weight: bolder;
     position: relative;
+    padding: 0 25px;
+    background: green;
+    border-radius: 0;
 }
 
 header .logo__container .badge::before {
     content: '';
     z-index: 4;
-    right: -35px;
+    right: -20px;
     left: auto;
     position: absolute;
     width: 0;
     height: 0;
-    border-left: 15px solid green;
-    border-bottom: 15px solid transparent;
-    border-top: 15px solid transparent;
-    border-right: 15px solid transparent;
+    border-left: 10px solid green;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 
 header .logo__container .badge svg:last-of-type { 
@@ -98,6 +102,7 @@ header .header__text
     text-transform: uppercase;
     position: relative;
     font-family: 'Open Sans', sans-serif;
+    padding: 10px 0;
 }
 
 header .header__text::before {
@@ -115,30 +120,33 @@ header .header__text::before {
 {
     position: relative;
     height: calc(100vh);
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row-reverse;
+    padding: 0;
 }
 
 .featured__video:before
 {
     content: '';
-    position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    z-index: 10;
-    background: rgba(0,0,0,0.5);
+    z-index: 16;
+    position:absolute;
+    background: rgb(0,0,0);
+    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 100%, rgba(0,0,0,1) 100%)     */
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(33,33,33,0.1) 100%, rgb(239 34 34) 100%);
 }
 
 .featured__video .video__wrapper
 {
-    position: absolute;
     right: 0;
-    z-index: 9;
-    width: 75%;
-    height: 100%;
-    margin: auto;
+    z-index: 11;
     top: 0;
     bottom: 0;
+    flex: 1;
 }
 
 .featured__video .video__wrapper .embed-responsive
@@ -147,6 +155,11 @@ header .header__text::before {
     top: 0;
     bottom: 0;
     margin: auto;;
+}
+
+.featured__video .video__wrapper video
+{
+    object-fit: fill;
 }
 
 .vw__shade
@@ -166,18 +179,22 @@ header .header__text::before {
 
 .featured__content
 {
-    position: absolute;
-    z-index: 12;
-    color: #fff;
-    top: 100px;
-    width: 30%;
-    height: 50%;
-    margin: auto;
-    /* left: 0;
-    right: 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    top: 0;
+    bottom: 0;
+    height: 100%;;
+    left: 0;
+    z-index: 15;;
+    width: 400px;
     font-size: 1.2em;
     text-shadow: 0 0 3px #111;
-    left: 40px;
+    position: absolute;
+    z-index: 16;;
+    left: 50px;
 }
 
 .featured__content h1 {
