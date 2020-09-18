@@ -208,6 +208,7 @@ header .header__text::before {
     position: absolute;
     z-index: 18;
     padding: 0;
+    left: 50px;
 }
 
 .featured__content h1 {
