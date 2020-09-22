@@ -136,7 +136,6 @@ header .header__text::before {
     z-index: 16;
     position:absolute;
     background: rgb(0,0,0);
-    /* background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.3) 100%, rgba(0,0,0,1) 100%)     */
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(33,33,33,0.1) 100%, rgb(239 34 34) 100%);
 }
 
@@ -149,13 +148,12 @@ header .header__text::before {
     top: 0;
     z-index: 17;
     position: absolute;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(33,33,33,0.2) 0%, rgb(0 0 0) 100%, rgb(0 0 0) 10%);
+    /*background: rgb(0,0,0);*/
+    /*background: linear-gradient(90deg, rgba(33,33,33,0.2) 0%, rgb(0 0 0) 100%, rgb(0 0 0) 10%);*/
 }
 
 .featured__video .video__wrapper
 {
-    right: 0;
     z-index: 14;
     top: 0;
     bottom: 0;
@@ -163,6 +161,8 @@ header .header__text::before {
     position: absolute;
     display: block;
     width: 100%;
+    right: 15px;
+    left: 15px;
 }
 
 .featured__video .video__wrapper .embed-responsive
@@ -273,6 +273,7 @@ header .header__text::before {
 {
     padding: 10px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .video__list .video__wrapper .vw__title__info
@@ -656,3 +657,181 @@ footer .footer__extra__links .nav-link
 .icon-youtube2:before {
     content: "\ea9e";
 }
+
+/* responsive  */
+
+@media(max-width: 767px)
+{
+    /* banner section */
+
+    .featured__video
+    {
+        height: 45vh;
+    }
+
+    .featured__content
+    {
+        width: 100%;
+        left: 0;
+        max-height: 300px;
+        position: relative;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: auto;
+        padding: 15px;
+        background-color: #111111;
+    }
+    .featured__content h1
+    {
+        font-size: 27px;
+    }
+
+    .featured__video .video__wrapper
+    {
+        position: relative;
+        height: 70vh;
+    }
+
+    .fv__inner__content
+    {
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+
+    .video__categories__links
+    {
+        width: 100%;
+        max-width: 100%;
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #111;
+        border-radius: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 25px;
+    }
+
+    .video__categories .list-group-item{
+        flex: 0 0 50%;
+        font-size: 14px;
+    }
+
+
+
+    .video__categories__links .vw__content
+    {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .video__categories .vw__content
+    {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+
+    .video__categories .vw__content > li
+    {
+        flex:  1 1 100% !important;
+    }
+
+
+    .video__categories.video__categories .col-9
+    {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .video__categories__content--scroller{
+        padding-top: 30px;
+    }
+
+/*    footer */
+
+    footer {
+        padding: 10px 0 10px 0;
+    }
+
+    footer .nav li.nav-item
+    {
+        flex: 1 1 50%;
+    }
+
+    footer .nav li.nav-item > a
+    {
+        background: #111;
+        margin: 5px;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        color: white;
+        text-transform: uppercase;
+        font-weight: normal;
+    }
+
+
+    footer .footer__links{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .social__links {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    footer .social__links span
+    {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    footer .social__links .nav
+    {
+        width: 100%;
+    }
+
+    footer .social__links + .btn
+    {
+        width: 100%;
+    }
+
+    footer .footer__extra__links .copyright__text {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer .footer__extra__links {
+        margin-top: 30px;
+        background: transparent;
+        display: flex;
+        color: #0a0e44;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+}
+
+
