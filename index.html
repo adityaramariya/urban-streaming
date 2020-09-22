@@ -15,7 +15,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-dark bg-dark">
             <div class="container">
                 <div class="logo__container">
                     <div class="badge">
@@ -1820,6 +1820,18 @@
     </div>
 </footer>
 </body>
+
+<script>
+    var offset = 150;
+    if ($(window).width() < 768 || $(window).height() < 768) {
+        $('.video__categories__links a').click(function(event) {
+            event.preventDefault();
+            $($(this).attr('href'))[0].scrollIntoView();
+            scrollBy(0, -offset);
+        });
+    }
+
+</script>
 <!--<script
         src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
