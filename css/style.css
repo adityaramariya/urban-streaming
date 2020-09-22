@@ -540,6 +540,16 @@ footer
     border-top: 1px solid #090909;
 }
 
+footer .nav-link
+{
+    color: green;
+}
+
+footer .nav-link:hover
+{
+    color: #72f572;
+}
+
 footer .social__links
 {
     display: flex;
@@ -613,49 +623,6 @@ footer .footer__extra__links .nav-link
 .footer__links .btn-outline-light svg
 {
     margin-left: 20px;
-}
-
-
-/* icon moon font */
-
-@font-face {
-    font-family: 'icomoon';
-    src:  url('./fonts/icomoon.eot?y7gk3v');
-    src:  url('./fonts/icomoon.eot?y7gk3v#iefix') format('embedded-opentype'),
-    url('./fonts/icomoon.ttf?y7gk3v') format('truetype'),
-    url('./fonts/icomoon.woff?y7gk3v') format('woff'),
-    url('./fonts/icomoon.svg?y7gk3v#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-facebook:before {
-    content: "\ea90";
-}
-.icon-instagram:before {
-    content: "\ea92";
-}
-.icon-twitter:before {
-    content: "\ea96";
-}
-.icon-youtube2:before {
-    content: "\ea9e";
 }
 
 /* responsive  */
