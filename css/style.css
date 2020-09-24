@@ -60,58 +60,63 @@ header .logo__container .badge {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width:75px;
     font-weight: bolder;
     position: relative;
-    padding: 0 25px;
+    padding: 0 15px;
     background: green;
-    border-radius: 0;
+}
+
+
+header .logo__container .badge svg
+{
+    margin: 0 5px;
+    font-size: 21px;
 }
 
 header .logo__container .badge::before {
-    content: '';
-    z-index: 4;
-    right: -20px;
-    left: auto;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 10px solid green;
-    border-bottom: 10px solid transparent;
-    border-top: 10px solid transparent;
-    border-right: 10px solid transparent;
+content: '';
+z-index: 4;
+right: -18px;
+left: auto;
+position: absolute;
+width: 0;
+height: 0;
+border-left: 10px solid green;
+border-bottom: 10px solid transparent;
+border-top: 10px solid transparent;
+border-right: 10px solid transparent;
 }
 
-header .logo__container .badge svg:last-of-type { 
-    color:#fff;;
+header .logo__container .badge svg:last-of-type {
+color:#fff;;
 }
 
 
 header .logo__container .navbar-brand {
-    margin-left: 30px;
-    font-size: 1.5em;
+margin-left: 30px;
+font-size: 1.5em;
 }
 
 header .header__text
 {
-    font-size: 12px;
-    line-height : 1.2;
-    color:red;
-    margin: 0;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
-    font-family: 'Open Sans', sans-serif;
-    padding: 10px 0;
+font-size: 12px;
+line-height : 1.2;
+color:red;
+margin: 0;
+font-weight: bold;
+text-transform: uppercase;
+position: relative;
+font-family: 'Open Sans', sans-serif;
+padding: 10px 0;
 }
 
 header .header__text::before {
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    background-color:red;
-    position: absolute;
-    left: -20px;
+width: 20px;
+height: 20px;
+border-radius: 100%;
+background-color:red;
+position: absolute;
+left: -20px;
 }
 
 /*  banner main section  */
